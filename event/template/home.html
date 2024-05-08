@@ -1,0 +1,332 @@
+{% extends 'basepage.html' %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+<style>
+
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+  .contact-info-content {
+  margin-left: 20px;
+}
+
+footer {
+  background: #000;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+footer .content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details {
+  color: #fdd166;
+  font-size: 30px;
+}
+.content .top .media-icons {
+  display: flex;
+}
+.content .top .media-icons a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1) {
+  background: #4267b2;
+}
+.top .media-icons a:nth-child(1):hover {
+  color: #4267b2;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(2) {
+  background: #e1306c;
+}
+.top .media-icons a:nth-child(2):hover {
+  color: #e1306c;
+  background: #fff;
+}
+
+footer .content .link-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box {
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fdd166;
+}
+.content .link-boxes .box li {
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+.content .link-boxes .box li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box {
+  margin-right: 55px;
+}
+.link-boxes .input-box input {
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 2px solid #afafb6;
+  background: #140b5c;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+}
+.link-boxes .input-box input::placeholder {
+  color: #afafb6;
+  font-size: 16px;
+}
+.link-boxes .input-box input[type="button"] {
+  background: #fff;
+  color: #140b5c;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.input-box input[type="button"]:hover {
+  opacity: 1;
+}
+footer .bottom-details {
+  width: 100%;
+  background: #000;
+  border-top: 0.5px solid #fff;
+}
+footer .bottom-details .bottom_text {
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a {
+  margin-right: 10px;
+}
+
+</style>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/c3.jpg' %}" class="d-block w-100" height="600px">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/c2.jpg' %}" class="d-block w-100" height="600px">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/c1.jpg' %}" class="d-block w-100" height="600px">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container-fluid mt-5" style="margin-bottom:100px;">
+    <h3 class="text-center fs-2">Moments Event Company</h3>
+    <p style="text-align:justify; line-height:2;">
+          We are a team of creative minds who live and breathe events who came together to form Moments Events India.
+          Our company stands out for it’s concepts, innovative themes and exceptional execution of all projects we manage.
+          We have made a reputation in the market for being a passionate band of professionals who have expertise in every facet of the Business.
+          We use our extensive expertise to deliver exceptional outcomes.
+    </p>
+</div>
+
+
+
+
+<section class="py-3 py-md-5">
+  <div class="container">
+    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6 col-xl-5">
+        <img class="img-fluid rounded" loading="lazy" src="{% static 'images/h1.jpg' %}" alt="About 1">
+      </div>
+      <div class="col-12 col-lg-6 col-xl-7">
+        <div class="row justify-content-xl-center">
+          <div class="col-12 col-xl-11">
+            <h2 class="mb-3" style="color: #d6ab3e;">ABOUT US</h2>
+            <p class=" fs-5 text-secondary mb-3 " style="text-align:justify;">Nothing is beautiful than memories. Let’s make your moments memorable with Moments Events India. </p>
+            <p class="fs-4">OUR WORKING EXPERIENCE IN EVENT MANAGEMENT</p>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-circle-check fs-3" style="color:#c99f34;"></i>
+              </div>
+
+              <div class="contact-info-content">
+                <p class="fs-4">Destination Wedding</p>
+
+              </div>
+          </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-circle-check fs-3" style="color:#c99f34;"></i>
+              </div>
+
+              <div class="contact-info-content">
+                <p class="fs-4">Corporate</p>
+
+              </div>
+          </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-circle-check fs-3" style="color:#c99f34;"></i>
+              </div>
+
+              <div class="contact-info-content">
+                <p class="fs-4">Entertainment Shows</p>
+
+              </div>
+          </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-circle-check fs-3" style="color:#c99f34;"></i>
+              </div>
+
+              <div class="contact-info-content">
+                <p class="fs-4">Product Launch & Promo</p>
+
+              </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <span class="logo_name">Moments Event Management Company</span>
+        </div>
+        <div class="media-icons">
+          <a target="on_blank" ><i class="fab fa-facebook"></i></a>
+          <a target="on_blank" ><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Links</li>
+          <li><a href="{% url 'eventapp:home' %}">Home</a></li>
+          <li><a href="{% url 'eventapp:about' %}">About Us</a></li>
+
+
+        </ul>
+        <ul class="box">
+          <li class="link_name">Recommended</li>
+          <li><a href="">India</a></li>
+          <li><a href="">Art and Culture</a></li>
+          <li><a href="">People</a></li>
+          <li><a href="">Travel</a></li>
+
+        </ul>
+        <ul class="box">
+          <li class="link_name">Legal Info</li>
+          <li><a href="">Licence</a></li>
+          <li><a href="">Terms and Conditions</a></li>
+          <li><a href="">Privacy Policies</a></li>
+
+        </ul>
+        <ul class="box">
+          <li class="link_name"><a href="{% url 'eventapp:contacts' %}">Contact Us</a></li>
+          <li><a target="on_blank" href="">+91 9102036525</a></li>
+          <li><a target="on_blank" href="">contactmomentseventcompany@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright @ 2024 <a href="#">Moments.</a></span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+{% endblock %}

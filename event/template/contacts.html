@@ -1,0 +1,154 @@
+{% extends 'basepage.html' %}
+{% load static %}
+{% block title %}
+    Contacts
+{% endblock %}
+
+{% block content %}
+
+<style>
+    * {
+
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+body::after {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+section {
+  position: relative;
+  z-index: 3;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  width: 80%;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+  height: 80px;
+  width: 80px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.contact-info-icon i {
+  font-size: 30px;
+  line-height: 70px;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  color: #1da9c0;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+
+  font-size: 1em;
+}
+
+</style>
+
+<section>
+
+    <div class="section-header">
+      <div class="container">
+          <h1>ARE YOU READY?<br>
+            LET’S MAKE SOMETHING AMAZING TOGETHER...</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+
+        <h2 style="color:#c99f34;">Contact Us</h2>
+        <p>We are a team of creative minds who live and breathe events who came together to form Moments Events India.
+            Our company stands out for it’s concepts, innovative themes and exceptional execution of all projects we manage.
+            We have made a reputation in the market for being a passionate band of professionals who have expertise in every facet of the Business.
+            We use our extensive expertise to deliver exceptional outcomes.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-home"></i>
+            </div>
+
+            <div class="contact-info-content">
+              <h4>Address</h4>
+              <p>XYZ house,<br/> Ernakulam, Kerala, <br/>India</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p>284303285</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+
+            <div class="contact-info-content">
+              <h4>Mail Us</h4>
+             <p>moments@gmail.com<br>harshedwin@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+{% endblock %}

@@ -1,0 +1,321 @@
+{% extends 'basepage.html' %}
+{% load static %}
+{% block title %}
+    About
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .team {
+  display: flex;
+  justify-content: center;
+}
+
+.team span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-bottom: 4px solid #ffdc0e;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+  .card {
+  position: relative;
+  background: #fff;
+  max-width: 350px;
+  width: 350px;
+  margin: 20px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+}
+
+
+
+
+
+
+
+/* ------------------------------footer---------------------------------------- */
+footer {
+  background: #000;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+footer .content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details {
+  color: #fdd166;
+  font-size: 30px;
+}
+.content .top .media-icons {
+  display: flex;
+}
+.content .top .media-icons a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1) {
+  background: #4267b2;
+}
+.top .media-icons a:nth-child(1):hover {
+  color: #4267b2;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(2) {
+  background: #e1306c;
+}
+.top .media-icons a:nth-child(2):hover {
+  color: #e1306c;
+  background: #fff;
+}
+
+footer .content .link-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box {
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fdd166;
+}
+.content .link-boxes .box li {
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+.content .link-boxes .box li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box {
+  margin-right: 55px;
+}
+.link-boxes .input-box input {
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 2px solid #afafb6;
+  background: #140b5c;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+}
+.link-boxes .input-box input::placeholder {
+  color: #afafb6;
+  font-size: 16px;
+}
+.link-boxes .input-box input[type="button"] {
+  background: #fff;
+  color: #140b5c;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.input-box input[type="button"]:hover {
+  opacity: 1;
+}
+footer .bottom-details {
+  width: 100%;
+  background: #000;
+  border-top: 0.5px solid #fff;
+}
+footer .bottom-details .bottom_text {
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a {
+  margin-right: 10px;
+}
+
+
+
+</style>
+
+<section class="py-3 py-md-5">
+  <div class="container">
+    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6 col-xl-5">
+        <img class="img-fluid rounded" loading="lazy" src="{% static 'images/about.jpg' %}" alt="About 1">
+      </div>
+      <div class="col-12 col-lg-6 col-xl-7">
+        <div class="row justify-content-xl-center">
+          <div class="col-12 col-xl-11">
+            <h2 class="mb-3">Who Are We?</h2>
+            <p class=" fs-5 text-secondary mb-3 " style="text-align:justify;">
+              Event Planner Ltd is an event logistics and marketing company which was formed back in 2013.
+              The company offers A-Z event planning services from a team of experienced and energetic event planners, suppliers, venues and more.
+              One of the main reasons behind the success of Event Planner is the fact that the team does not charge fees to its clients!
+              With the number of events we organise, Event Planner Ltd does not need to add exorbitant fees and mark-ups to make its profit margins.
+              This ensures that our clients list, which is constantly growing, make regular use of our services.</p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="team" ><span>OUR TEAM</span></div>
+  <div class="container" >
+
+    <div class="card" style="width: 18rem;">
+      <img src="{% static 'images/o1.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #ffdc0e;">Hema Sharma</h5>
+        <p class="card-text"><span class="personal-info">
+                <span class="info">Chief Event Officer (CEO)</span> <br>
+                Email: <a href="">hemasharma@gmail.com</a>
+              </span></p>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="{% static 'images/o2.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #ffdc0e;">Harsh Edwin</h5>
+        <p class="card-text"><span class="personal-info">
+                <span class="info">Marketing & Publicity Head</span><br>
+                Email: <a href="">harshedwin@gmail.com</a>
+              </span></p>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="{% static 'images/o3.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #ffdc0e;">Preet Gurisha</h5>
+        <p class="card-text"><span class="personal-info">
+                <span class="info">Event manager</span> <br>
+                Email: <a href="">preetgurisha@gmail.com</a>
+              </span></p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------footer------------------------------------------ -->
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <span class="logo_name">Moments Event Management Company</span>
+        </div>
+        <div class="media-icons">
+          <a target="on_blank" ><i class="fab fa-facebook"></i></a>
+          <a target="on_blank" ><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Links</li>
+          <li><a href="{% url 'eventapp:home' %}">Home</a></li>
+          <li><a href="{% url 'eventapp:about' %}">About Us</a></li>
+
+
+        </ul>
+        <ul class="box">
+          <li class="link_name">Recommended</li>
+          <li><a href="">India</a></li>
+          <li><a href="">Art and Culture</a></li>
+          <li><a href="">People</a></li>
+          <li><a href="">Travel</a></li>
+
+        </ul>
+        <ul class="box">
+          <li class="link_name">Legal Info</li>
+          <li><a href="">Licence</a></li>
+          <li><a href="">Terms and Conditions</a></li>
+          <li><a href="">Privacy Policies</a></li>
+
+        </ul>
+        <ul class="box">
+          <li class="link_name"><a href="{% url 'eventapp:contacts' %}">Contact Us</a></li>
+          <li><a target="on_blank" href="">+91 9102036525</a></li>
+          <li><a target="on_blank" href="">contactmomentseventcompany@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright @ 2024 <a href="#">Moments.</a></span>
+      </div>
+    </div>
+  </footer>
+
+{% endblock %}

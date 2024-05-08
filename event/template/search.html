@@ -1,0 +1,31 @@
+{% extends 'basepage.html' %}
+{% load static %}
+{% block title %}
+    Search
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid" style="margin-bottom:100px;">
+    <div class="row">
+        {% if e %}
+        {% for i in e %}
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+              <img src="{{i.img.url}}" class="card-img-top" height="286px" width="286px" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{i.name}}<br>{{i.desc}}</h5>
+
+              </div>
+            </div>
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <h4 class="text-center">No result found</h4>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

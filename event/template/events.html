@@ -1,0 +1,29 @@
+{% extends 'basepage.html' %}
+{% load static %}
+{% block title %}
+    Events
+{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center">Events</h1>
+<div class="container">
+
+  {% for i in eve %}
+
+  <div class="card" style="width: 18rem; display:inline-block; margin:20px;">
+    <img src="{{i.img.url}}" class="card-img-top" height="250px" width="200px">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{i.name}}</h5>
+      <p class="card-text">{{i.desc}}</p>
+      <center>
+        <a href="{% url 'eventapp:booking' %}" class="btn btn-secondary">Book This Event</a>
+      </center>
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}
