@@ -1,0 +1,32 @@
+{% extends 'basepage.html' %}
+{% load static %}
+{% block title %}
+    List Booked Event
+{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center">Booked Events</h1>
+
+<div class="container-fluid">
+
+  {% for i in l %}
+
+  <div class="card" style="width: 20rem; display:inline-block; margin:20px;">
+    <div class="card-body">
+      <h5 class="card-title text-center" style="color:#cf82c2">{{i.cus_name}}</h5>
+      <p class="card-text">Phone: {{i.cus_ph}}</p>
+        <p class="card-text">Event: {{i.name}}</p>
+        <p class="card-text">Booked For: {{i.booking_date}}</p>
+        <p class="card-text">Booked On: {{i.booking_on}}</p>
+
+        <a href="{% url 'eventapp:update' i.id %}" class="btn ms-4" style="background-color:#d67cb5;">Update</a>
+        <a href="{% url 'eventapp:delete' i.id %}" class="btn ms-4" style="background-color:#d67cb5;">Delete</a>
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}
