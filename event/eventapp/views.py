@@ -39,7 +39,7 @@ def contacts(request):
 
 
 def list_booking(request):
-    l = Booking.objects.all()
+    l = Booking.objects.all().order_by('booking_date')
     f = BookingForm()
     return render(request, 'list.html', {'l': l, 'f': f})
 
